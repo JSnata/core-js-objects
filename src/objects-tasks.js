@@ -179,11 +179,12 @@ function sellTickets(/* queue */) {
  *    console.log(r.getArea());   // => 200
  */
 function Rectangle(width, height) {
-  const rectangleObj = {};
-  rectangleObj.width = width;
-  rectangleObj.height = height;
-  rectangleObj.getArea = function () {
-    return this.width * this.height;
+  const rectangleObj = {
+    width,
+    height,
+    getArea() {
+      return this.width * this.height;
+    },
   };
   return rectangleObj;
 }
